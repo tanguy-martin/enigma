@@ -1,0 +1,40 @@
+html, body {
+	height: 100%;
+	background-color: #569F39;
+	-webkit-animation: change-bg 6s alternate infinite;
+}
+
+.enigma {
+	width: 20px;
+	height: 50px;
+	background: #7CB833;
+	color: #fff;
+	font-size: 50px;
+	font-weight: bold;
+	padding: 10px 30px 14px;
+	position: fixed;
+	top: 0;
+	border: 1px solid #0ead13;
+	border-radius: 50%;
+	-webkit-box-shadow: 0 0 5px 4px rgba(6,107,52,0.49);
+	-moz-box-shadow: 0 0 5px 4px rgba(6,107,52,0.49);
+	box-shadow: 0 0 5px 4px rgba(6,107,52,0.49);
+
+	-webkit-animation: bump 5s alternate infinite;
+	-webkit-animation: move 0.1s alternate infinite;
+}
+
+@-webkit-keyframes bump {
+  0% { -webkit-box-shadow: 0 0 5px 4px rgba(6,107,52,0.49); }
+  100% { -webkit-box-shadow: 0 0 10px 8px rgba(6,107,52,0.49); }
+}
+
+@-webkit-keyframes move {
+  0% { }
+  100% { }
+}
+
+@-webkit-keyframes change-bg {
+  0% { background-color: #569F39; }
+  100% { background-color: #2a4d1c; }
+}
