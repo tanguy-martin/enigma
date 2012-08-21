@@ -1,7 +1,7 @@
 html, body {
 	height: 100%;
 	background-color: #569F39;
-	-webkit-animation: change-bg 6s alternate infinite;
+	animation: change-bg 3s alternate infinite;
 }
 
 .enigma {
@@ -16,25 +16,36 @@ html, body {
 	top: 0;
 	border: 1px solid #0ead13;
 	border-radius: 50%;
-	-webkit-box-shadow: 0 0 5px 4px rgba(6,107,52,0.49);
-	-moz-box-shadow: 0 0 5px 4px rgba(6,107,52,0.49);
-	box-shadow: 0 0 5px 4px rgba(6,107,52,0.49);
+	box-shadow: 0 0 30px #eb1c2a;
+	animation: bump 2s alternate infinite,
+			   appear 2s alternate forwards,
+			   bubbly 5s 3s alternate infinite;
 
-	-webkit-animation: bump 5s alternate infinite;
-	-webkit-animation: move 0.1s alternate infinite;
+	transition: all 2s ease-out;
 }
 
-@-webkit-keyframes bump {
-  0% { -webkit-box-shadow: 0 0 5px 4px rgba(6,107,52,0.49); }
-  100% { -webkit-box-shadow: 0 0 10px 8px rgba(6,107,52,0.49); }
+@keyframes bump {
+  0% { box-shadow: 0 0 30px #2a4d1c; }
+  50% { box-shadow: 0 0 80px #569F39; }
+  100% { box-shadow: 0 0 30px #2a4d1c; }
 }
 
-@-webkit-keyframes move {
+@keyframes appear {
+  0% { transform: scale(0,0); }
+  100% { transform: scale(100%, 100%); }
+}
+
+@keyframes bubbly {
+  0% { transform: scale(100%, 100%); }
+  100% { transform: scale(50%, 50%); }
+}
+
+@keyframes move {
   0% { }
   100% { }
 }
 
-@-webkit-keyframes change-bg {
+@keyframes change-bg {
   0% { background-color: #569F39; }
   100% { background-color: #2a4d1c; }
 }
